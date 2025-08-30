@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmb0ocy7f70ek"]
+
+[ext_resource type="Script" uid="uid://b1oampa0jn06h" path="res://scripts/dialogue_box.gd" id="1_fu8b5"]
+[ext_resource type="FontFile" uid="uid://bw7b70siwfuls" path="res://assets/fonts/CONCHARS.png" id="1_rc1id"]
+
+[node name="DialogueBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialgoueBox" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 500.0
+offset_right = -66.0
+script = ExtResource("1_fu8b5")
+
+[node name="DialogueText" type="RichTextLabel" parent="CanvasLayer/DialgoueBox"]
+layout_mode = 0
+offset_right = 1026.0
+offset_bottom = 40.0
+theme_override_fonts/normal_font = ExtResource("1_rc1id")
+text = "you find an inn within the next town and decide to sit down and rest for a while"
+
+[node name="RespText" type="TextEdit" parent="CanvasLayer/DialgoueBox"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 124.0
+offset_right = 1049.0
+offset_bottom = 147.0
+theme_override_fonts/font = ExtResource("1_rc1id")
+text = "does this text work?"
+
+[node name="RespButton" type="Button" parent="CanvasLayer/DialgoueBox"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 124.0
+offset_right = 26.0
+offset_bottom = 147.0
+
+[connection signal="pressed" from="CanvasLayer/DialgoueBox/RespButton" to="CanvasLayer/DialgoueBox" method="_on_resp_button_pressed"]

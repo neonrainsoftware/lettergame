@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://s3f0v1rlanwy"]
+
+[ext_resource type="PackedScene" uid="uid://cey7dg32ioae4" path="res://scenes/dialogue_manager.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://dmb0ocy7f70ek" path="res://scenes/dialogue_box.tscn" id="2_0wfyh"]
+
+[node name="Main" type="Node2D"]
+
+[node name="DialogueManager" parent="." instance=ExtResource("1_o5qli")]
+offset_left = 65.0
+offset_top = 36.0
+offset_right = 65.0
+offset_bottom = 36.0
+sample_dialogue = "does this work"
+
+[node name="DialogueBox" parent="DialogueManager" instance=ExtResource("2_0wfyh")]
+layout_mode = 1
+offset_left = 1390.0
+offset_top = 424.0
+offset_right = 1390.0
+offset_bottom = 424.0

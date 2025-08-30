@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8p5vxx6xydoj"]
+
+[ext_resource type="FontFile" uid="uid://bw7b70siwfuls" path="res://assets/fonts/CONCHARS.png" id="1_e37qy"]
+
+[node name="Alphabet" type="Node2D"]
+
+[node name="HFlowContainer" type="HFlowContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 274.0
+offset_bottom = 90.0
+theme_override_fonts/normal_font = ExtResource("1_e37qy")
+text = "this text should've worked"

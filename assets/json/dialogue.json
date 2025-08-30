@@ -1,0 +1,9 @@
+{
+	"npc": 
+	{
+	 "convo_one" : [
+ 		"Hey, you feeling okay?",
+ 		"You look like you're gonna pass out."
+ 	]
+	}
+}
